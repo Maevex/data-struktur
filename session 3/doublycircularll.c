@@ -128,3 +128,41 @@ void displayList(struct Node* head){
     
     
 }
+
+int main(int argc, char const *argv[])
+{
+    struct Node* head = NULL;
+    int testcase, data;
+
+//insert data
+    printf("Insert Test case");
+    scanf("%d", &testcase);
+    for (int i = 0; i < testcase; i++)
+    {
+        scanf("%d", &data);
+        head = insertEnd(head, data);
+    }
+
+    printf("circular doubly linked list: ");
+    displayList(head);
+
+    printf("Inserting 10 at beginning : ");
+    head = insertFirst(head, 10);
+    displayList(head);
+
+    printf("deleting first node");
+    head = deleteFirst(head);
+
+    displayList(head);
+
+    printf("deleting last node");
+    head = deleteEnd;
+
+    displayList(head);
+
+    printf("updated doubly circular linked list");
+    displayList(head);
+
+    
+    return 0;
+}
